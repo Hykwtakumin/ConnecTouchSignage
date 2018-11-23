@@ -180,7 +180,7 @@ $('#menu_box .box').on('click', function () {
  * メイン実行関数
  *
  */
-const mainFunc = async () => {
+const mainFunc = async () => {c
 
     /**
      *

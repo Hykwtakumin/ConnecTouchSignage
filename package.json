@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist/*",
+    "tsc": "./node_modules/.bin/tsc",
+    "build": "npm run clean && npm run tsc && npm run browserify",
+    "browserify": "browserify ./dist/index.js -o ./dist/bundle.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-core": "^6.26.0",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -21,7 +26,9 @@
     "gulp": "^3.9.1",
     "gulp-sass": "^3.1.0",
     "jquery": "^3.2.1",
+    "moment": "^2.22.2",
     "superagent": "^3.8.1",
+    "typescript": "^3.1.6",
     "vinyl-source-stream": "^1.1.0"
   }
 }
