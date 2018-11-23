@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist/*",
     "tsc": "./node_modules/.bin/tsc",
-    "build": "npm run clean && npm run copy && npm run tsc && npm run browserify",
+    "build": "npm run clean && npm run tsc && npm run browserify",
     "browserify": "browserify ./dist/index.js -o ./dist/bundle.js"
   },
   "keywords": [],

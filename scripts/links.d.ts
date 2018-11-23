@@ -1,11 +1,11 @@
-export interface Links {
+export type Links = {
     _id :{
-        $oid: string    //MongoDBのID
+        $oid: string    //mongoのID
     },
-    time : string,  //UNIXTimeStamp
+    time : string,  //UNIXタイムスタンプ
     url: string | undefined,    //Url
     link: [
-        string, //readerId
-        string  //cardId
+        string, //0番目の要素がリーダーのId
+        string  //1番目の要素がカードのId
         ]
 }
